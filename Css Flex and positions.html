@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> ASSIGNMENT </title>
+<style>
+.flex-container {
+
+    display: flex;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(23, 90, 95);
+    justify-content: center;
+    align-items: center;
+   margin-left: auto;
+   margin-right: auto;
+}
+.flex-item {
+    background-color: rgb(130, 203, 221);
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+#h1 {
+       text-align: center;
+}
+.heading{
+    padding-left: 100px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+p{
+    padding-left: 70px;
+}
+ul {
+    padding-left: 100px;
+  list-style-type: square;
+}
+
+.container{
+    text-align: center;
+    
+}
+
+.item1
+{
+    background-color: brown;
+    position: relative;
+    top: 50px;
+    right: 20px;
+
+}
+.item2
+{
+   background-color: crimson;
+   position: absolute;
+   left: 0;
+}
+
+.item3
+{
+    background-color: rgb(223, 79, 79);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    
+    
+}
+
+#one
+{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+#two
+{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    display: inline-block;
+    position: relative;
+    top: 50px;
+    left: -50px;
+    z-index: 3;
+}
+#three
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    display: inline-block;
+    position: relative;
+    top: 100px;
+    left: -100px;
+    z-index: 1;
+}
+
+#parent
+{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-left: 750px;
+}
+#four
+{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+}
+#five
+{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    display: inline-block;
+    position: relative;
+    top: 50px;
+    left: -50px;
+    z-index: 2;
+}
+#six
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    display: inline-block;
+    position: relative;
+    top: 100px;
+    left: -100px;
+    z-index: 1;
+}
+
+</style>
+</head>
+<body>
+    <div id="h1"><u><h1 style="padding-top: 70px;">CSS Essentials - Flex and Positions</h1></u></div>
+
+    <!---CSS FLEXBOX-->
+
+    <div class="heading">CSS Flexbox</div>
+    <div><p>       Flexbox is a layout model which helps the elements to behave according to the different screen sizes and displays. The main purpose of Flexbox is to  provide an efficient way to layout and align the items. 
+        CSS Flexbox contains two components :
+        </p></div>
+        <div>
+            <ul>
+                <li>Flexbox Container</li>
+                <li>Flex Item</li>
+            </ul>
+        </div>
+        <div class="heading">Flexbox Container</div>
+        <div><p>Flexbox Container provides the parent properties.</p></div>
+        <div class="heading">Flexbox Items</div>
+        <div><p>Flexbox items provides the children properties.</p></div>
+        <div><p> Following is an example to show four flex items within a flex container:</p></div>
+        
+<div class="flex-container">
+    
+  <div class="flex-item">flex item 1</div>
+  <div class="flex-item">flex item 2</div>
+  <div class="flex-item">flex item 3</div>
+  <div class="flex-item">flex item 4</div>
+</div>
+<div><p style="text-align: center; font-size: small;">The dark blue part is the Flexbox Container and light blue part is the Flexbox items.</p></div>
+<div class="heading">Display flex</div>
+<div><p>Display flex is a property of flexbox container. By using display flex to parent container, the children automatically enable flex content. By using display flex we can easily align the items in center. </p></div>
+<div><p>The above given example is also an example of display flex. </p></div>
+<br><br>
+
+<!--CSS POSITIONS-->
+
+<div class="heading">CSS Positions</div>
+<div><p>The CSS position property is used to set position for an element. There are three positioning in CSS:</p></div>
+<div>
+    <ul>
+        <li>Relative positioning</li>
+        <li>Absolute positioning</li>
+        <li>Fixed positioning</li>
+    </ul>
+</div>
+    <div class="heading">Relative positioning</div>
+    <div><p>It is used to set the elements relative to its normal position.</p></div>
+    <div class="container flex-container">
+    <div class="flex-item item item1">1</div>
+    <div class="flex-item item">2</div>
+    <div class="flex-item item ">3</div>
+    
+</div>
+<div><p>In the above example, I have assigned relative position to item 1. So it have moved relatively 50px from top and 20px from its right to its parent container. </p></div>
+<div><p>We use Relative position when we want to change the position of item to its current position without changing the layout around it.</p></div>
+
+<div class="heading">Absolute positioning</div>
+
+    <div><p>It is used to position an element relative to the first parent element. With this positioning, we can place an element anywhere on a page. If there is no such element then its parent element will we HTML.</p></div>
+    <div class="container flex-container">
+    <div class="flex-item item">1</div>
+    <div class="flex-item item item2">2</div>
+    <div class="flex-item item">3</div>
+   
+</div>
+<div><p>In the above example, the item 2 has chnaged its position according to the HTML. I have assigned it left- 0, so it has moved to the left side of html page. We can assign left, right, bottom and top values to position it accordingly.</p></div>
+<div><p>We use absolute position when we have to set the position of an item according to the html.</p></div>
+
+<div class="heading">Fixed positioning</div>
+<div><p>It is used to fix the position of an item relative to the web browser.</p></div>
+<div class="container flex-container">
+    
+<div class="flex-item item">1</div>
+<div class="flex-item item">2</div>
+<div class="flex-item item item3">3</div>
+
+</div>
+<div><p>In the above example, item 3 has changed its position and it is fixed to the right of the browser. When we will scroll the page it will not change its position.  </p></div>
+<div><p>We use fixed postion when we have to fix the position of an item with respect to the browser. </p></div>
+<br><br>
+<div class="heading">CSS Z-Index</div>
+<div><p>It is used to align the elements on 3-dimensional plane,i.e., z-axis. It only works when the position of elements are absolute, fixed or relative.</p></div>
+<div id="parent">
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+</div>
+<br><br><br><br><br>
+<div><p>In the above example, the z-indexof blue box is 3, so it has appeared on top of green and red box.</p></div>
+<div><p>Z-index property affects the stacking order of positioned elements. Whichever element has more z-index will appear at top on the stack.</p></div>
+<div id="parent">
+    <div id="four"></div>
+    <div id="five"></div>
+    <div id="six"></div>
+</div>
+<br><br><br><br><br><br>
+<div><p style="padding-bottom: 200px;">In the above example, z-index of green box is 3, so it appears above of other two boxes. z-index of blue is 2 and red is 1, so blue appears above the red box and red appears at last.</p></div>
+</body>
+</html>
